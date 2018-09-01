@@ -16,7 +16,9 @@ app.use(helmet())
 app.use(cors())
 
 app.listen(config.port, (err) => {
-  if (err) console.log(err)
-
-  console.info(`Server started on port %s. ${config.port}`)
+  if (err) {
+    console.log(err)
+  } else {
+    console.info(`Server started on port %s. ${config.port}`)
+  }
 })
