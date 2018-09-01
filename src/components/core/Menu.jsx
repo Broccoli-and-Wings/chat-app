@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 const navStyles = {
@@ -13,7 +13,7 @@ const isActive = (history, path) => {
   return { color: '#fff' }
 }
 
-const Menu = withRouter(({ history }) => (
+const Menu = (history) => (
   <div style={navStyles}>
     <Link to="/" style={isActive(history, '/')}>
       Home
@@ -22,6 +22,6 @@ const Menu = withRouter(({ history }) => (
       Signup
     </Link>
   </div>
-))
+)
 
-export default Menu
+export default withRouter(Menu)
