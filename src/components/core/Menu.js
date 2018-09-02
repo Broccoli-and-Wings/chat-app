@@ -22,7 +22,11 @@ const Menu = ({ history }) => (
 );
 
 Menu.propTypes = {
-  history: PropTypes.shape().isRequired,
+  history: PropTypes.shape({
+    location: PropTypes.shape({
+      pathname: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default withRouter(Menu);
