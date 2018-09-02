@@ -13,7 +13,7 @@ app.use(compress())
 app.use(helmet())
 app.use(cors())
 
-app.listen(config.port, (err) => {
+app.listen(config.port, err => {
   if (err) {
     console.log(err)
   } else {
