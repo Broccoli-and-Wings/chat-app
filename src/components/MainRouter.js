@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Menu from './core/Menu.jsx';
-import Home from './core/Home.jsx';
-import Signup from './user/Signup.jsx';
+import Menu from './core/Menu';
+import Home from './core/Home';
+import Signup from './user/Signup';
 
 const MainRouter = () => (
   <Fragment>
