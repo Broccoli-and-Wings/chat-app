@@ -5,9 +5,9 @@ import { Link, withRouter } from 'react-router-dom';
 import styles from './Menu.scss';
 
 const isActive = (history, path) =>
-  history.location.pathname === path ? '' : styles.active;
+  history.location.pathname === path ? styles.active : '';
 
-const Menu = ({ history }) => (
+const Menu = history => (
   <div className={styles.container}>
     <Link to="/" className={`${styles.link} ${isActive(history, '/')}`}>
       Home
