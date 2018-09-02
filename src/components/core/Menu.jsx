@@ -1,24 +1,19 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
-const navStyles = {
-  backgroundColor: '#333',
-  color: '#fff',
-  padding: '10px'
-}
+import styles from './Menu.scss'
 
-const isActive = (history, path) => {
-  if (history.location.pathname === path) return { color: 'tomato' }
+const isActive = (history, path) =>
+  history.location.pathname === path
+    ? ''
+    : styles.active
 
-  return { color: '#fff' }
-}
-
-const Menu = (history) => (
-  <div style={navStyles}>
-    <Link to="/" style={isActive(history, '/')}>
+const Menu = ({ history }) => (
+  <div className={ styles.container }>
+    <Link to="/" className={`${styles.link} ${isActive(history, '/')}`}>
       Home
     </Link>
-    <Link to="/signup" style={isActive(history, '/signup')}>
+    <Link to="/signup" className={`${styles.link} ${isActive(history, '/signup')}`}>
       Signup
     </Link>
   </div>
