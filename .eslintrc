@@ -1,9 +1,12 @@
 {
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "env": {
     "browser": true
   },
-  "extends": "airbnb",
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  }
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "plugins": ["react", "jsx-a11y", "import"]
 }
