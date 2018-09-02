@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
+import React, { Fragment } from 'react'
 
-const Home = () => <React.Fragment>Home Component</React.Fragment>
+const Home = () => <Fragment>Home Component</Fragment>
 
 export default Home
