@@ -8,7 +8,7 @@ const isActive = (history, path) =>
     ? ''
     : styles.active
 
-const Menu = withRouter(({ history }) => (
+const Menu = ({ history }) => (
   <div className={ styles.container }>
     <Link to="/" className={`${styles.link} ${isActive(history, '/')}`}>
       Home
