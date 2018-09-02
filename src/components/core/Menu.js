@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 const navStyles = {
   backgroundColor: '#333',
   color: '#fff',
-  padding: '10px'
-}
+  padding: '10px',
+};
 
 const isActive = (history, path) => {
-  if (history.location.pathname === path) return { color: 'tomato' }
+  if (history.location.pathname === path) return { color: 'tomato' };
 
-  return { color: '#fff' }
-}
+  return { color: '#fff' };
+};
 
-const Menu = withRouter(({ history }) => (
+const Menu = history => (
   <div style={navStyles}>
     <Link to="/" style={isActive(history, '/')}>
       Home
@@ -22,6 +22,6 @@ const Menu = withRouter(({ history }) => (
       Signup
     </Link>
   </div>
-))
+);
 
-export default Menu
+export default withRouter(Menu);
