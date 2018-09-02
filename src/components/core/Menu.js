@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link, withRouter } from 'react-router-dom';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, withRouter } from 'react-router-dom'
 
-import styles from './Menu.scss';
+import styles from './Menu.scss'
 
 const isActive = (history, path) =>
-  history.location.pathname === path ? styles.active : '';
+  history.location.pathname === path ? styles.active : ''
 
 const Menu = ({ history }) => (
   <div className={styles.container}>
@@ -19,7 +19,7 @@ const Menu = ({ history }) => (
       Signup
     </Link>
   </div>
-);
+)
 
 Menu.propTypes = {
   history: PropTypes.shape({
@@ -27,6 +27,6 @@ Menu.propTypes = {
       pathname: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-};
+}
 
-export default withRouter(Menu);
+export default withRouter(Menu)

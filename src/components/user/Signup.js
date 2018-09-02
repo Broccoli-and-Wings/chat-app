@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 
-const Signup = () => <Fragment>Signup Component</Fragment>;
+const Signup = () => <Fragment>Signup Component</Fragment>
 
-export default Signup;
+export default Signup
